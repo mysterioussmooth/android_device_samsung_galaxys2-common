@@ -113,10 +113,10 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ril.hsxpa=1 \
+    ro.ril.gprsclass=10 \
     ro.telephony.ril_class=SamsungExynos4RIL \
     mobiledata.interfaces=pdp0,wlan0,gprs,ppp0 \
-    ro.ril.hsxpa=1 \
-    ro.ril.gprsclass=10
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
@@ -176,7 +176,7 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
 
-$(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-hdpi-1024-dalvik-heap.mk)
 
 # Include exynos4 platform specific parts
 TARGET_HAL_PATH := hardware/samsung/exynos4/hal
